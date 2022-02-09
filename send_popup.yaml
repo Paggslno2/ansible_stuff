@@ -1,10 +1,11 @@
 ---
-- hosts: all
-  tasks: 
-  - name: Warn logged in users of impending upgrade (note use of async to stop the module from waiting until notification expires).
-    community.windows.win_toast:
-      expire: 60
-      title: System Upgrade Notification
-      msg: Automated upgrade about to start.  Please save your work and log off before {{ deployment_start_time }}
-    async: 60
-    poll: 0
+ - name: Warn logged in users of impending upgrade (note use of async to stop the module from waiting until notification expires).
+   hosts: all
+   tasks:
+   - name: Jetzt kommte der eigentliche Befehl 
+     win_toast:
+       expire: 60
+       title: System Upgrade Notification
+       msg: Automated upgrade about to start.  Please save your work and log off before {{ deployment_start_time }}
+     async: 60
+     poll: 0
