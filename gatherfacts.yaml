@@ -1,0 +1,7 @@
+---
+- name: Collect Facts from target host.
+  hosts: all
+  become: yes
+  become_user: Administrator
+  tasks:
+    - setup:
