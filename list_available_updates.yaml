@@ -1,0 +1,9 @@
+---
+ - name: Ansible updating windows machines  
+   hosts: all    
+   tasks: 
+   - name: Search-only, return list of found updates (if any), log to C:\ansible_wu.txt
+     ansible.windows.win_updates:
+       category_names: *
+       state: searched
+       log_path: C:\ansible_wu.txt
