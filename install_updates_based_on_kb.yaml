@@ -8,6 +8,7 @@
        - SecurityUpdates
        accept_list:
        - KB5010354
+       reboot: yes
 
 
 
