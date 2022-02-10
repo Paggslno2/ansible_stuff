@@ -2,7 +2,7 @@
  - name: check if LMM exists  
    hosts: all    
    tasks: 
-   - name: Ensure user bob is present
+   - name: Ensure user Mike Molto --> lmm is present
      ansible.windows.win_user:
        name: lmm
        state: query
