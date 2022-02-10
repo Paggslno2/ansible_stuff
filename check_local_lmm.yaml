@@ -1,0 +1,10 @@
+---
+ - name: check if LMM exists  
+   hosts: all    
+   tasks: 
+   - name: Ensure user bob is present
+     ansible.windows.win_user:
+       name: lmm
+       state: query
+       groups:
+         - Administrators
