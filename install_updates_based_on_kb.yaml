@@ -1,10 +1,13 @@
 ---
-- name: Install only particular updates based on the KB numbers
-  ansible.windows.win_updates:
-    category_name:
-    - SecurityUpdates
-    accept_list:
-    - KB5010354
+ - name: Ansible updating windows machines  
+   hosts: all    
+   tasks: 
+   - name: Install only particular updates based on the KB numbers
+     ansible.windows.win_updates:
+       category_name:
+       - SecurityUpdates
+       accept_list:
+       - KB5010354
 
 
 
